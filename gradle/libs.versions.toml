@@ -7,7 +7,7 @@ kotlin = "2.1.20"
 kotlinxDatetime = "0.6.1"
 kotlinxSerializationJSON = "1.7.3"
 kotlinxCoroutines = "1.9.0"
-
+protobufPlugin = "0.9.4"
 [libraries]
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
@@ -20,3 +20,4 @@ kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutine
 
 [plugins]
 kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }

@@ -5,6 +5,7 @@ plugins {
     // Apply Kotlin Serialization plugin from `gradle/libs.versions.toml`.
     alias(libs.plugins.kotlinPluginSerialization)
     id("com.squareup.wire")
+    alias(libs.plugins.protobuf)
 }
 
 wire {
@@ -16,7 +17,7 @@ wire {
         includes = ["com.example.messages.*"]
     }
     sourcePath {
-        srcDir += "src/main/protos" // 你的 .proto 文件目录
+        srcDir += "${rootDir}/protos" // 你的 .proto 文件目录
     }
 
     // 可选：排除某些 proto 文件
