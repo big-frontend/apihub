@@ -1,5 +1,9 @@
 plugins {
-    id("buildsrc.convention.kotlin-jvm") apply false
-    id("com.squareup.wire") version "4.4.0" apply false
+    alias(libs.plugins.kotlin.jvm) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.kotlin.kapt) apply false
+    alias(libs.plugins.wire) apply false
+    alias(libs.plugins.protobuf) apply false
+
 }
 

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package com.electrolytej.network.model;
 option java_package = "com.electrolytej.network.model";
-option java_outer_classname = "TokenState";
+//option java_outer_classname = "TokenState";
 enum TokenState {
     NONE = 0;
     UNAUTHORIZED = 1;
