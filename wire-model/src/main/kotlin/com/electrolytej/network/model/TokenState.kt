@@ -16,6 +16,9 @@ import com.squareup.wire.`internal`.JvmStatic
 import kotlin.Int
 import kotlin.Suppress
 
+/**
+ * option java_outer_classname = "TokenState";
+ */
 public enum class TokenState(
   override val `value`: Int,
 ) : WireEnum {
