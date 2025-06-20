@@ -8,6 +8,7 @@ kotlinxDatetime = "0.6.1"
 kotlinxSerializationJSON = "1.7.3"
 kotlinxCoroutines = "1.9.0"
 protobufPlugin = "0.9.5"
+modulePublisher = "1.0.0"
 wire = "5.3.3"
 [libraries]
 kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
@@ -26,4 +27,5 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }
+modulepublisher = { id = "io.github.electrolytej.module-publisher-plugin", version.ref = "modulePublisher" }
 wire = { id = "com.squareup.wire", version.ref = "wire" }

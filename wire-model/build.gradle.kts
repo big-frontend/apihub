@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.wire)
-
+//    alias(libs.plugins.modulepublisher)
 }
 wire {
     kotlin {
@@ -18,6 +18,13 @@ wire {
 //    可选：排除某些 proto 文件
 //    prune "google.protobuf.*"
 }
+//publish {
+//    it.name = "wire-model"
+//    groupId = "io.github.electrolytej"
+//    artifactId = "wiremodel"
+//    it.version = "1.0.0"
+//    website = "https://github.com/big-frontend/module-assembler"
+//}
 kotlin {
     jvmToolchain(21)
 }
