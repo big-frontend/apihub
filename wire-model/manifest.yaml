@@ -1,0 +1,30 @@
+CommonProtos:
+  roots:
+    - jedi.Lightsaber
+    - jedi.MindTrick
+    - jedi.TheForce
+    - jedi.Anakin
+
+DarkSideProtos:
+  dependencies:
+    - CommonProtos
+  roots:
+    - darkside.*
+    - jedi.Lightning
+  prunes:
+    - jedi.Mercy
+
+LightSideProtos:
+  dependencies:
+    - CommonProtos
+  roots:
+    - lightside.*
+    # Import the rest of the Jedi powers not already in CommonProtos
+    - jedi.*
+  prunes:
+    # Remove unused lightsaber colors
+    - jedi.LightsaberColor#red
+    # Remove deprecated field. Use green_lightsaber instead.
+    - lightside.Luke#blue_lightsaber
+    # Remove dark-side-only types
+    - jedi.Lightning
