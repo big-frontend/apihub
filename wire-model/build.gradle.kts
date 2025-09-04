@@ -11,10 +11,21 @@ wire {
 //        javaPackage = "com.example.protobuf"
 //        includes = listOf("com.example.messages.*")
         out = "src/main/kotlin"
+        // `client` to generate interfaces best suited to sending outbound calls.
+        // `server` to generate interfaces best suited to receiving inbound calls.
+        rpcRole = "client"
+        // Server only
+        // `suspending` to generate coroutines APIs that require a Kotlin coroutines context.
+        // `blocking` to generate blocking APIs callable by Java and Kotlin.
+        rpcCallStyle = "suspending"
+        // Server only
+        // True for emitted services to generate one interface per RPC.
+        singleMethodServices = false
     }
     sourcePath {
         srcDir("${rootDir}/proto")
     }
+//    protoPath("${rootDir}/proto")
 //    可选：排除某些 proto 文件
 //    prune "google.protobuf.*"
 }

@@ -22,6 +22,7 @@ dependencies {
     implementation(project(":protoc-model"))
     implementation(project(":wire-model"))
     implementation(libs.bundles.kotlinxEcosystem)
+    implementation(libs.wire.grpc)
 }
 
 application {
